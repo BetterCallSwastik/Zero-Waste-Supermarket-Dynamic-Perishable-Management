@@ -1,0 +1,26 @@
+# Environment & secrets
+.env
+
+# Trained model (large binary)
+dqn_pricing_agent.zip
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Data (large CSV — users should download separately)
+# perishable_goods_management.csv
+data.csv

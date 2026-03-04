@@ -1,0 +1,8 @@
+# Zero-Waste Supermarket — Dependencies
+gymnasium>=0.29.0
+stable-baselines3>=2.1.0
+pandas>=2.0.0
+numpy>=1.24.0
+streamlit>=1.30.0
+openai>=1.0.0
+python-dotenv>=1.0.0
