@@ -14,9 +14,6 @@ from stable_baselines3.common.monitor import Monitor
 
 from rl_env import PerishablePricingEnv, DISCOUNT_MAP
 
-# ---------------------
-# Config
-# ---------------------
 DATA_PATH = os.path.join(os.path.dirname(__file__), "perishable_goods_management.csv")
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "dqn_pricing_agent")
 TIMESTEPS = 10_000
@@ -99,14 +96,10 @@ def predict_discount(state: np.ndarray, model_path: str = MODEL_PATH) -> tuple[i
     action_idx = int(action)
     return action_idx, DISCOUNT_MAP[action_idx]
 
-
-# ---------------------
-# CLI entry point
-# ---------------------
 if __name__ == "__main__":
     trained_model = train()
 
-    # Quick smoke test
+
     test_state = np.array([0.1, 0.5, 0.3], dtype=np.float32)
     action_idx, discount = predict_discount(test_state)
     print(f"\n🔍  Smoke test — state={test_state}")
